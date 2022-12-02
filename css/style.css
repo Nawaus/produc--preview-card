@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--Cream);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  background: white;
+  justify-content: space-around;
+  min-width: 100px;
+  height: 480px;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+.mobile-img {
+  display: none;
+}
+.desktop-img img {
+  position: relative;
+  right: 22px;
+  display: flex;
+  justify-content: center;
+  width: 320px;
+  border-radius: 10px 0 0 10px;
+}
+
+h1 {
+  color: var(--Dark-grayish-blue);
+  font-size: 0.9em;
+  letter-spacing: 5px;
+  position: relative;
+  top: 12px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.head-text {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-family: "Fraunces";
+  width: 200px;
+  height: 70px;
+  line-height: 35px;
+}
+
+.main-text {
+  width: 260px;
+  color: var(--Dark-grayish-blue);
+  font-weight: 500;
+  line-height: 1.3rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.payment {
+  position: relative;
+  display: flex;
+  gap: 1.3em;
+  height: 50px;
+  align-items: center;
+}
+
+.new-price {
+  color: var(--Dark-cyan);
+  font-family: "Fraunces";
+  font-size: 2.4em;
+}
+
+.old-price {
+  text-decoration: line-through;
+  font-weight: 500;
+  color: var(--Dark-grayish-blue);
+}
+
+span {
+  text-decoration: line-through;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  background: var(--Dark-cyan);
+  padding: 15px 70px 15px 70px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--White);
+  font-weight: 700;
+  border: none;
+  position: relative;
+  top: 15px;
+  transition: all ease-in-out 0.2s;
+}
+
+button:hover {
+  background-color: hsl(159, 36%, 22%);
+}
+
+footer {
+  font-family: "Montserrat", sans-serif;
+  padding: 50px;
+  text-align: center;
+}
+
+a {
+  color: var(--Dark-cyan);
+}
+
+@media (max-width: 600px) {
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img {
+    display: flex;
+  }
+  .mobile-img img {
+    width: 390px;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .main-text {
+    width: 350px;
+  }
+  .head-text {
+    position: relative;
+    top: 30px;
+    width: 300px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+  }
+  .product {
+    position: relative;
+    bottom: 50px;
+  }
+  button {
+    position: relative;
+    right: 0px;
+    padding: 20px 120px 20px 120px;
+  }
+
+  h1 {
+    position: relative;
+    top: 60px;
+  }
+  footer {
+    font-size: 0.8em;
+    padding: 0;
+  }
+}
